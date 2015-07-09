@@ -14,7 +14,6 @@ It performs the following steps
 * Executes the InstallAnsible.sh wrapper.
 * Rebases Babun.
 
-
 ### Powershell
     $env:WINVAGINSANS="d:\vm"; iex ((new-object net.webclient).DownloadString('https://raw.githubusercontent.com/darkedges/WinVagInsAns/master/WinVagInsAns.ps1'))
 ### Windows CMD
