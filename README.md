@@ -15,9 +15,9 @@ It performs the following steps
 * Rebases Babun.
 
 ### Powershell
-    $env:WINVAGINSANS="d:\vm"; iex ((new-object net.webclient).DownloadString('https://raw.githubusercontent.com/darkedges/WinVagInsAns/master/WinVagInsAns.ps1'))
+    $env:WINVAGINSANS="d:\vm"; iex((new-object net.webclient).DownloadString('https://raw.githubusercontent.com/darkedges/WinVagInsAns/v1.0/WinVagInsAns.ps1'))
 ### Windows CMD
-    @powershell -NoProfile -ExecutionPolicy Bypass -Command " $env:WINVAGINSANS="d:\vm"; iex ((new-object net.webclient).DownloadString('https://raw.githubusercontent.com/darkedges/WinVagInsAns/master/WinVagInsAns.ps1'))"
+    @powershell -NoProfile -ExecutionPolicy Bypass -Command "$env:WINVAGINSANS="d:\vm"; iex((new-object net.webclient).DownloadString('https://raw.githubusercontent.com/darkedges/WinVagInsAns/v1.0/WinVagInsAns.ps1'))"
 
 ## Acknowledgements
 The following resources have been helpful in generating this process.
