@@ -1,6 +1,12 @@
 # WinVagInAns
 This is a Powershell script for Windows that installs [Babun](http://babun.github.io/), [Vagrant](https://www.vagrantup.com/), [VirtualBox](https://www.virtualbox.org/) and [Ansible](http://www.ansible.com/). It does all the configuration so that you don't have to and once completed will give you a flly working Ansible Provisioner in Vagrant.
-##Installation
+##Installation - Chocolatey installed
+### Powershell
+    iex((new-object net.webclient).DownloadString('https://raw.githubusercontent.com/darkedges/WinVagInsAns/v1.0.1/chocolatey/tools/chocolateyinstall.ps1'))
+### Windows CMD
+    @powershell -NoProfile -ExecutionPolicy Bypass -Command "iex((new-object net.webclient).DownloadString('https://raw.githubusercontent.com/darkedges/WinVagInsAns/v1.0.1/chocolatey/tools/chocolateyinstall.ps1'))"
+
+##Installation - Chocolatey not installed
 This has been tested on Windows 7 Default Powershell V2. Other versions of OS / Powershell may have issues. It requires an environmental WINVAGINSANS to be set for where the software is to be installed.
 **Note: This is for a clean install only. Existing installations will not work.**
 
@@ -15,9 +21,9 @@ It performs the following steps
 * Rebases Babun.
 
 ### Powershell
-    $env:WINVAGINSANS="d:\vm"; iex((new-object net.webclient).DownloadString('https://raw.githubusercontent.com/darkedges/WinVagInsAns/v1.0/WinVagInsAns.ps1'))
+    $env:WINVAGINSANS="d:\vm"; iex((new-object net.webclient).DownloadString('https://raw.githubusercontent.com/darkedges/WinVagInsAns/v1.0.1/WinVagInsAns.ps1'))
 ### Windows CMD
-    @powershell -NoProfile -ExecutionPolicy Bypass -Command "$env:WINVAGINSANS="d:\vm"; iex((new-object net.webclient).DownloadString('https://raw.githubusercontent.com/darkedges/WinVagInsAns/v1.0/WinVagInsAns.ps1'))"
+    @powershell -NoProfile -ExecutionPolicy Bypass -Command "$env:WINVAGINSANS="d:\vm"; iex((new-object net.webclient).DownloadString('https://raw.githubusercontent.com/darkedges/WinVagInsAns/v1.0.1/WinVagInsAns.ps1'))"
 
 ## Acknowledgements
 The following resources have been helpful in generating this process.

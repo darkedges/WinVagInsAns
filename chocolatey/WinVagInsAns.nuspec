@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
    <metadata>
-      <id>ansible</id>
-      <title>ansible (Install)</title>
+      <id>WinVagInsAns</id>
+      <title>WinVagInsAns (Install)</title>
       <version>0.0.1</version>
       <authors>Nicholas Irving</authors>
       <owners>Nicholas Irving</owners>

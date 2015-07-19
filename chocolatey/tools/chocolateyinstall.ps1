@@ -10,14 +10,17 @@ $ansibleTempDir = Join-Path $env:TEMP "ansible"
 $tempDir = Join-Path $ansibleTempDir "ansibleInstall"
 $installed = $TRUE;
 
+$vagrantInstallDir = Get-Which "choco"
+if (!$vagrantInstallDir) {$installed=$FALSE; Write-Host -ForegroundColor Red "Need to install Chocolocatey: https://chocolatey.org/ for instructions" }
+
 $virtualboxInstallDir = Get-RegistryValue "HKLM:\SOFTWARE\Oracle\VirtualBox" "InstallDir"
-if (!$virtualboxInstallDir) {$installed=$FALSE; Write-Host -ForegroundColor Red "Need to install dependency: virtualbox" }
+if (!$virtualboxInstallDir) {$installed=$FALSE; Write-Host -ForegroundColor Red "Need to install chocolocatey dependency: choco install virtualbox" }
 $cygwinInstallDir = Get-RegistryValue "HKLM:\SOFTWARE\Cygwin\setup" "rootdir"
-if (!$cygwinInstallDir) {$installed=$FALSE; Write-Host -ForegroundColor Red "Need to install dependency: cygwin" }
+if (!$cygwinInstallDir) {$installed=$FALSE; Write-Host -ForegroundColor Red "Need to install chocolocatey dependency: choco install cygwin" }
 $vagrantInstallDir = Get-Which "vagrant"
-if (!$vagrantInstallDir) {$installed=$FALSE; Write-Host -ForegroundColor Red "Need to install dependency: vagrant" }
+if (!$vagrantInstallDir) {$installed=$FALSE; Write-Host -ForegroundColor Red "Need to install chocolocatey dependency: choco install vagrant" }
 $cyggetInstallDir = Get-Which "cyg-get"
-if (!$cyggetInstallDir) {$installed=$FALSE; Write-Host -ForegroundColor Red "Need to install dependency: cyg-get" }
+if (!$cyggetInstallDir) {$installed=$FALSE; Write-Host -ForegroundColor Red "Need to install chocolocatey dependency: choco install cyg-get" }
 
 if (!$installed) { exit; }
 
