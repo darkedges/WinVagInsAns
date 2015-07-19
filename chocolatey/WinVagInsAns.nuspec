@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+   <metadata>
+      <id>ansible</id>
+      <title>ansible (Install)</title>
+      <version>0.0.1</version>
+      <authors>Nicholas Irving</authors>
+      <owners>Nicholas Irving</owners>
+      <summary />
+      <description>Simple Wrapper for installing Ansible for Vagrant on Windows</description>
+      <projectUrl>http://www.github.com/darkedges/WinVagInsAns</projectUrl>
+      <packageSourceUrl>http://www.github.com/darkedges/WinVagInsAns</packageSourceUrl>
+      <docsUrl>http://www.github.com/darkedges/WinVagInsAns</docsUrl>
+      <mailingListUrl>http://www.github.com/darkedges/WinVagInsAns</mailingListUrl>
+      <bugTrackerUrl>http://www.github.com/darkedges/WinVagInsAns</bugTrackerUrl>
+      <tags>ansible</tags>
+      <copyright>2015</copyright>
+      <licenseUrl>http://www.github.com/darkedges/WinVagInsAns</licenseUrl>
+      <requireLicenseAcceptance>false</requireLicenseAcceptance>
+      <dependencies>
+         <dependency id="vagrant" />
+         <dependency id="virtualbox" />
+         <dependency id="cyg-get" />
+      </dependencies>
+      <releaseNotes />
+   </metadata>
+   <files>
+      <file src="tools\**" target="tools" />
+   </files>
+</package>
